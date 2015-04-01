@@ -1,0 +1,25 @@
+
+
+<html>    
+<style>
+        img {
+            cursor: pointer;
+        transition: -webkit-transform 0.1s ease
+        }
+    img:focus {
+        -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        var imgs = document.querySelectorAll('img');
+        Array.prototype.forEach.call(imgs, function(el, i) {
+            if (el.tabIndex <= 0) el.tabIndex = 10000;
+        });
+    });
+</script>
+    <body>
+        <img class="focus" src="cat1.jpg">
+     </body>
+</html>
