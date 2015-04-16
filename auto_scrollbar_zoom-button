@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html><head><title>Testsheet</title>
+
+<script type="text/javascript">
+function zoom(zm,img_id) {
+  img=document.getElementById(img_id)
+  wid=img.width
+  ht=img.height
+  img.style.width=(wid*zm)+"px"
+  img.style.height=(ht*zm)+"px"
+}
+</script>
+
+<script>
+//testing, not yet working
+function changeDropDown(dropdown,img_id) {
+  var file = dropdown.options[dropdown.selectedIndex].value;
+  document.getElementById("img_drop").write("<div style="overflow:scroll; height:500px; width: 500px"> <img id=img_id src=file></div>");
+  document.getElementById("img_drop").submit();
+}
+</script>
+
+<style type="text/css">
+html,body
+{
+  margin:0;
+  padding:0;
+  height:100%;
+  border:0;
+}
+table{}
+.fixed { table-layout:fixed; width:"100px"}
+.fixed td { overflow: hidden; }
+</style>
+
+<style>td{}
+.flow img {
+    position: absolute;
+}
+</style>  
+
+<style>div{}
+.scroll {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+</style>
+
+<style type="text/css">
+img{overflow:hidden
+  }
+  .size{
+  width:500px;
+  height:500px;
+  }
+</style></head>
+
+<body><form name="Seite" action="#">
+<table border="1" class="fixed">
+<col width="50%">
+<col width="50%">
+<row height="50%">
+<row height="50%">
+
+<tr> 
+  <td>
+    <p>Zauberspruch 1
+      <input type="button" value ="-" onclick="zoom(0.9,'pic_1')"/>
+      <input type="button" value ="+" onclick="zoom(1.1,'pic_1')"/>
+      <!--<form id="img_drop" name="img_drop">Choose Image:-->
+      <!--<select onchange='changeDropDown(this,pic_1);'>-->
+      <select name="choose Picture">
+        <option value="cat1.jpg">cat1.jpg</option>
+        <option value="cat2.jpg">cat2.jpg</option>
+        <option value="cat3.jpeg">cat3.jpeg</option>
+        <option value="cat4.jpg">cat4.jpg</option>
+      </select>
+      <!--</form>-->
+    </p>
+    <div style="overflow:scroll; height:500px; width: 500px">
+    <img id="pic_1" src="cat1.jpg"></div>
+  </td>
+  
+  <td>
+    <p>Zauberspruch 2
+      <input type="button" value ="-" onclick="zoom(0.9,'pic_2')"/>
+      <input type="button" value ="+" onclick="zoom(1.1,'pic_2')"/>
+      <select name="choose Picture">
+        <option value="cat1.jpg">cat1.jpg</option>
+        <option value="cat2.jpg">cat2.jpg</option>
+        <option value="cat3.jpeg">cat3.jpeg</option>
+        <option value="cat4.jpg">cat4.jpg</option>
+      </select>
+    </p>
+    <div style="overflow:scroll;  height:500px; width: 500px">
+    <img id="pic_2" src="cat2.jpg"></div>
+  </td>
+</tr>
+
+<tr> 
+  <td>
+    <p>Zauberspruch 3    
+      <input type="button" value ="-" onclick="zoom(0.9,'pic_3')"/>
+      <input type="button" value ="+" onclick="zoom(1.1,'pic_3')"/>
+      <select name="choose Picture">
+        <option value="cat1.jpg">cat1.jpg</option>
+        <option value="cat2.jpg">cat2.jpg</option>
+        <option value="cat3.jpeg">cat3.jpeg</option>
+        <option value="cat4.jpg">cat4.jpg</option>
+      </select>
+    </p>
+    <div style="overflow:scroll; height:500px; width: 500px">
+    <img id="pic_3" src="cat3.jpeg"></div>
+  </td>
+    
+  <td>
+    <p>Zauberspruch 4
+      <input type="button" value ="-" onclick="zoom(0.9,'pic_4')"/>
+      <input type="button" value ="+" onclick="zoom(1.1,'pic_4')"/>
+      <select name="choose Picture">
+        <option value="cat1.jpg">cat1.jpg</option>
+        <option value="cat2.jpg">cat2.jpg</option>
+        <option value="cat3.jpeg">cat3.jpeg</option>
+        <option value="cat4.jpg">cat4.jpg</option>
+      </select>
+    </p>
+    <div style="overflow:scroll;  height:500px; width: 500px">
+    <img id="pic_4" src="cat4.jpg"></div>
+  </td>
+</tr>
+
+</table></form>
+</body></html> 
